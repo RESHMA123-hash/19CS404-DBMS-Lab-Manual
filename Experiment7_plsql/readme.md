@@ -34,7 +34,7 @@ END;
 - Declare two numeric variables and initialize them.
 - Use an `IF` statement to compare the values.
 - Display the greater number using `DBMS_OUTPUT.PUT_LINE`.
-###
+### Program
 SET SERVEROUTPUT ON;
 
 DECLARE
@@ -60,6 +60,9 @@ Elapsed: 00:00:00.003
 
 **Expected Output:**  
 Greater number is: 80
+<img width="692" height="386" alt="Screenshot 2026-08-24 083247" src="https://github.com/user-attachments/assets/cc99ffa9-3edf-4475-adeb-ce43c18a74d5" />
+
+
 
 ---
 
@@ -99,6 +102,8 @@ Elapsed: 00:00:00.005
 
 **Expected Output:**  
 Sum of first 10 natural numbers is: 55
+<img width="687" height="388" alt="Screenshot 2026-08-24 083407" src="https://github.com/user-attachments/assets/fb3062ec-8a9b-459c-925a-23cbcfde1b77" />
+
 
 ---
 
@@ -145,6 +150,8 @@ Elapsed: 00:00:00.005
 **Expected Output:**  
 n = 7  
 Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
+<img width="792" height="438" alt="Screenshot 2026-08-24 083454" src="https://github.com/user-attachments/assets/8f66c2ab-0ffa-424e-ab77-7aa3d32684f9" />
+
 
 ---
 
@@ -184,6 +191,8 @@ Elapsed: 00:00:00.005
 **Expected Output:**  
 n = 1535  
 Reversed number is 5351
+<img width="657" height="282" alt="Screenshot 2026-08-24 083539" src="https://github.com/user-attachments/assets/a8d2e2d2-7005-4ead-88db-7331788e6dc3" />
+
 
 ---
 
@@ -227,6 +236,8 @@ Elapsed: 00:00:00.004
 **Expected Output:**  
 a = 10, b = 9, c = 15  
 Largest of three number is 15
+<img width="697" height="373" alt="Screenshot 2026-08-24 083645" src="https://github.com/user-attachments/assets/27b7cfcb-000a-486f-8560-d89221bb894a" />
+
 
 ## RESULT
 Thus, the PL/SQL programs using variables, conditionals, and loops were executed successfully.
