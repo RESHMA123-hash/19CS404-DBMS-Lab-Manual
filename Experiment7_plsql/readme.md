@@ -27,12 +27,36 @@ END;
 
 # PL/SQL Programs – Steps and Expected Output
 
+
 ## 1. Write a PL/SQL program to find the Greatest of Two Numbers
 
 ### Steps:
 - Declare two numeric variables and initialize them.
 - Use an `IF` statement to compare the values.
 - Display the greater number using `DBMS_OUTPUT.PUT_LINE`.
+###
+SET SERVEROUTPUT ON;
+
+DECLARE
+    a NUMBER := 50;
+    b NUMBER := 80;
+BEGIN
+    IF a > b THEN
+        DBMS_OUTPUT.PUT_LINE('Greater number is: ' || a);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Greater number is: ' || b);
+    END IF;
+END;
+/
+### Result
+
+Greater number is: 80
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.003
+
 
 **Expected Output:**  
 Greater number is: 80
@@ -46,6 +70,32 @@ Greater number is: 80
 - Initialize a `sum` variable to 0.
 - Use a `WHILE` loop to iterate from 1 to `n`, adding each number to the sum.
 - Display the result using `DBMS_OUTPUT.PUT_LINE`.
+### Program
+SET SERVEROUTPUT ON;
+
+DECLARE
+    n NUMBER := 10;
+    total NUMBER := 0;
+    i NUMBER := 1;
+BEGIN
+    WHILE i <= n LOOP
+        total := total + i;
+        i := i + 1;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Sum of first ' || n ||
+                         ' natural numbers is: ' || total);
+END;
+/
+###
+
+Sum of first 10 natural numbers is: 55
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.005
+
 
 **Expected Output:**  
 Sum of first 10 natural numbers is: 55
@@ -59,6 +109,38 @@ Sum of first 10 natural numbers is: 55
 - Initialize the first two Fibonacci numbers (0 and 1).
 - Use a loop to generate the next terms using the formula `c = a + b`.
 - Print each term in the series.
+### Program
+SET SERVEROUTPUT ON;
+
+DECLARE
+    n NUMBER := 7;
+    a NUMBER := 0;
+    b NUMBER := 1;
+    c NUMBER;
+    i NUMBER := 1;
+BEGIN
+    DBMS_OUTPUT.PUT('Fibonacci sequence: ');
+
+    WHILE i <= n LOOP
+        DBMS_OUTPUT.PUT(a || ' ');
+        c := a + b;
+        a := b;
+        b := c;
+        i := i + 1;
+    END LOOP;
+
+    DBMS_OUTPUT.NEW_LINE;
+END;
+/
+### Result
+
+Fibonacci sequence: 0 1 1 2 3 5 8 
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.005
+
 
 **Expected Output:**  
 n = 7  
@@ -72,6 +154,32 @@ Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
 - Declare a variable `n` and assign a value (e.g., 1535).
 - Use a loop to extract each digit using modulo and reverse the number.
 - Display the reversed number.
+### Program 
+SET SERVEROUTPUT ON;
+
+DECLARE
+    n NUMBER := 1535;
+    rev NUMBER := 0;
+    digit NUMBER;
+BEGIN
+    WHILE n > 0 LOOP
+        digit := MOD(n, 10);
+        rev := rev * 10 + digit;
+        n := TRUNC(n / 10);
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Reversed number is: ' || rev);
+END;
+/
+### Result
+
+Reversed number is: 5351
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.005
+
 
 **Expected Output:**  
 n = 1535  
@@ -85,6 +193,36 @@ Reversed number is 5351
 - Declare three numeric variables `a`, `b`, and `c`.
 - Use nested `IF-ELSIF-ELSE` conditions to find the largest among the three.
 - Display the largest number.
+
+### Program
+SET SERVEROUTPUT ON;
+
+DECLARE
+    a NUMBER := 10;
+    b NUMBER := 9;
+    c NUMBER := 15;
+    largest NUMBER;
+BEGIN
+    IF a >= b AND a >= c THEN
+        largest := a;
+    ELSIF b >= a AND b >= c THEN
+        largest := b;
+    ELSE
+        largest := c;
+    END IF;
+
+    DBMS_OUTPUT.PUT_LINE('Largest of three numbers is: ' || largest);
+END;
+/
+### Result
+
+Largest of three numbers is: 15
+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.004
+
 
 **Expected Output:**  
 a = 10, b = 9, c = 15  
